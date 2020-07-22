@@ -1,0 +1,18 @@
+{
+	"translatorTextKey": "",
+	"supportedLocales": [],
+	"liferayDir": "/home/jonathan.silva/Projetos/Objective/liferay-onbording/bundles",
+	"webpack": {
+		"rules": [
+			{
+				"test": "src\\/.*\\.ts$",
+				"use": "ts-loader"
+			}
+		],
+		"extensions": [
+			".ts",
+			".js"
+		],
+		"mainModule": "index.ts"
+	}
+}

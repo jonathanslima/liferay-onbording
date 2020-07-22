@@ -1,0 +1,4971 @@
+
+		<!DOCTYPE html>
+		<html>
+			<head>
+				<meta charset="utf-8" />
+				<title>Report of liferay-npm-bundler execution</title>
+				<style>
+					body, h1, h2, h3, p, li {
+						font-family: sans-serif;
+					}
+					
+					body, p, th, td, li {
+						font-size: 10pt;
+					}
+					
+					h1 {
+						font-size: 16pt;
+						margin: 1em 0 .5em 0;
+					}
+					
+					h2 {
+						font-size: 13pt;
+						margin: 1em 0 .5em 0;
+					}
+					
+					h3 {
+						font-size: 11pt;
+						margin: 1em 0 .5em 0;
+					}
+					
+					table {
+						margin: 0 0 .5em 0;
+					}
+					
+					tr:nth-child(odd) {
+						background-color: #F6F6F6;
+					}
+					
+					th {
+						background-color: #F0F0F0;
+						text-align: left;
+					}
+					
+					th, td {
+						padding: .1em 0;
+						vertical-align: top;
+					}
+					
+					td.info, td.warn, td.error {
+						background: green;
+						border-radius: 4px;
+						color: white;
+						text-align: center;
+						vertical-align: middle;
+						width: 1px;
+						white-space: nowrap;
+					}
+
+					td.warn {
+						background: orange;
+					}
+
+					td.error {
+						background: red;
+					}
+					
+					td.source {
+						white-space: nowrap;
+					}
+
+					ul {
+						padding-left: 1em;
+						margin: 0 0 .5em 0;
+					}
+					
+					p {
+						margin: 0 0 .5em 0;
+					}
+
+					a {
+						text-decoration: none;
+						color: #055;
+					}
+
+					#log-level-selector {
+						position: fixed;
+						top: 1em;
+						right: 1em;
+						background-color: #eee;
+						padding: .3em;
+						border-radius: 4px;
+						font-size: 8pt;
+						border: 1px solid #ccc;
+					}
+
+					#log-level-selector select {
+						font-size: 8pt;
+					}
+
+					.configuration {
+						display: inline-block;
+						margin-bottom: .5em;
+					}
+
+					.configuration > div {
+						background-color: #f0f0f0;
+						cursor: pointer;
+						border-radius: 4px;
+						padding: 2px;
+						display: inline;
+					}
+
+					.configuration > div:after {
+						content: "👀";
+						padding: 0 .5em;
+					}
+
+					.configuration > pre {
+						font-size: 8pt;
+						display: none;
+					}
+
+					.configuration:hover > pre {
+						display: block;
+					}
+				</style>
+				<script id="report" type="application/json">
+					{"_executionDate":"2020-07-22T14:32:26.663Z","_versionsInfo":{"liferay-npm-bundler":{"version":"2.18.8","path":"node_modules/liferay-npm-bundler"},"liferay-npm-build-tools-common":{"version":"2.18.8","path":"node_modules/liferay-npm-build-tools-common"},"liferay-npm-bundler-plugin-resolve-linked-dependencies":{"version":"2.18.8","path":"node_modules/liferay-npm-bundler-plugin-resolve-linked-dependencies"},"liferay-npm-bundler-plugin-namespace-packages":{"version":"2.18.8","path":"node_modules/liferay-npm-bundler-plugin-namespace-packages"},"liferay-npm-bundler-plugin-inject-imports-dependencies":{"version":"2.18.8","path":"node_modules/liferay-npm-bundler-plugin-inject-imports-dependencies"},"babel-preset-liferay-standard":{"version":"2.18.8","path":"node_modules/babel-preset-liferay-standard"},"liferay-npm-bundler-plugin-replace-browser-modules":{"version":"2.18.8","path":"node_modules/liferay-npm-bundler-plugin-replace-browser-modules"},"liferay-npm-bundler-plugin-inject-peer-dependencies":{"version":"2.18.8","path":"node_modules/liferay-npm-bundler-plugin-inject-peer-dependencies"}},"_packages":{"/":{"id":"/","process":{"copy":{},"pre":{"resolve-linked-dependencies":{"plugin":{"name":"resolve-linked-dependencies","config":{}},"logger":{"_msgs":[]}}},"babel":{"config":{"presets":["liferay-standard"],"babelrc":false,"compact":false,"only":"**/*","sourceMaps":true},"files":{"AppComponent.js":{"logger":{"_msgs":[{"source":"add-module-metadata","level":"info","things":["Added 'esModule' flag"]},{"source":"normalize-requires","level":"info","things":["Normalized",2,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react', 'objective-react$react-dom'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'objective-react@1.0.0/AppComponent'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",0,"define() names,",0,"define() dependencies,","and",2,"require() names"]}]}},"index.js":{"logger":{"_msgs":[{"source":"add-module-metadata","level":"info","things":["Added 'esModule' flag"]},{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react', 'objective-react$react-dom', './AppComponent'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'objective-react@1.0.0/index'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",0,"define() names,",0,"define() dependencies,","and",2,"require() names"]}]}}}},"post":{"namespace-packages":{"plugin":{"name":"namespace-packages","config":{}},"logger":{"_msgs":[{"source":"namespace-packages","level":"info","things":["Namespaced",2,"dependencies"]}]}},"inject-imports-dependencies":{"plugin":{"name":"inject-imports-dependencies","config":{}},"logger":{"_msgs":[]}}}},"name":"objective-react","version":"1.0.0","allFiles":["package.json"],"copiedFiles":["package.json"]},"react@16.8.6":{"id":"react@16.8.6","process":{"copy":{"exclude-imports":{"plugin":{"name":"exclude-imports","config":{}},"logger":{"_msgs":[]}}},"pre":{"replace-browser-modules":{"plugin":{"name":"replace-browser-modules","config":{}},"logger":{"_msgs":[]}}},"babel":{"config":{"presets":["liferay-standard"],"babelrc":false,"compact":false,"only":"**/*","sourceMaps":true},"files":{"index.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/react.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react@16.8.6/index'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"cjs/react.production.min.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$object-assign'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react@16.8.6/cjs/react.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]}]}},"cjs/react.development.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",4,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$object-assign', 'objective-react$prop-types/checkPropTypes'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react@16.8.6/cjs/react.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",2,"require() names"]}]}},"umd/react.production.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react@16.8.6/umd/react.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react.profiling.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react@16.8.6/umd/react.profiling.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react.development.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react@16.8.6/umd/react.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}}}},"post":{"namespace-packages":{"plugin":{"name":"namespace-packages","config":{}},"logger":{"_msgs":[{"source":"namespace-packages","level":"info","things":["Namespaced package"]},{"source":"namespace-packages","level":"info","things":["Namespaced",4,"dependencies"]}]}},"inject-imports-dependencies":{"plugin":{"name":"inject-imports-dependencies","config":{}},"logger":{"_msgs":[]}},"inject-peer-dependencies":{"plugin":{"name":"inject-peer-dependencies","config":{}},"logger":{"_msgs":[]}}}},"name":"react","version":"16.8.6","allFiles":["LICENSE","README.md","build-info.json","index.js","package.json","cjs/react.development.js","cjs/react.production.min.js","umd/react.development.js","umd/react.production.min.js","umd/react.profiling.min.js"],"copiedFiles":["LICENSE","README.md","build-info.json","cjs/react.development.js","cjs/react.production.min.js","index.js","package.json","umd/react.development.js","umd/react.production.min.js","umd/react.profiling.min.js"]},"loose-envify@1.4.0":{"id":"loose-envify@1.4.0","process":{"copy":{"exclude-imports":{"plugin":{"name":"exclude-imports","config":{}},"logger":{"_msgs":[]}}},"pre":{"replace-browser-modules":{"plugin":{"name":"replace-browser-modules","config":{}},"logger":{"_msgs":[]}}},"babel":{"config":{"presets":["liferay-standard"],"babelrc":false,"compact":false,"only":"**/*","sourceMaps":true},"files":{"cli.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",2,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: '.', 'objective-react$fs'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'loose-envify@1.4.0/cli'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]}]}},"custom.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './loose-envify'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'loose-envify@1.4.0/custom'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"index.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './loose-envify'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'loose-envify@1.4.0/index'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"loose-envify.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$stream', 'objective-react$util', './replace'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'loose-envify@1.4.0/loose-envify'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",2,"require() names"]}]}},"replace.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$js-tokens'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'loose-envify@1.4.0/replace'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]}]}}}},"post":{"namespace-packages":{"plugin":{"name":"namespace-packages","config":{}},"logger":{"_msgs":[{"source":"namespace-packages","level":"info","things":["Namespaced package"]},{"source":"namespace-packages","level":"info","things":["Namespaced",1,"dependencies"]}]}},"inject-imports-dependencies":{"plugin":{"name":"inject-imports-dependencies","config":{}},"logger":{"_msgs":[]}},"inject-peer-dependencies":{"plugin":{"name":"inject-peer-dependencies","config":{}},"logger":{"_msgs":[{"source":"inject-peer-dependencies","level":"warn","things":["Failed to resolve dependency","objective-react$fs","with error:",{"code":"MODULE_NOT_FOUND"}]},{"source":"inject-peer-dependencies","level":"warn","things":["Failed to resolve dependency","objective-react$stream","with error:",{"code":"MODULE_NOT_FOUND"}]},{"source":"inject-peer-dependencies","level":"info","things":["Injected dependency","objective-react$util@0.11.1"]}]}}}},"name":"loose-envify","version":"1.4.0","allFiles":["LICENSE","README.md","cli.js","custom.js","index.js","loose-envify.js","package.json","replace.js"],"copiedFiles":["LICENSE","README.md","cli.js","custom.js","index.js","loose-envify.js","package.json","replace.js"]},"js-tokens@4.0.0":{"id":"js-tokens@4.0.0","process":{"copy":{"exclude-imports":{"plugin":{"name":"exclude-imports","config":{}},"logger":{"_msgs":[]}}},"pre":{"replace-browser-modules":{"plugin":{"name":"replace-browser-modules","config":{}},"logger":{"_msgs":[]}}},"babel":{"config":{"presets":["liferay-standard"],"babelrc":false,"compact":false,"only":"**/*","sourceMaps":true},"files":{"index.js":{"logger":{"_msgs":[{"source":"add-module-metadata","level":"info","things":["Added 'esModule' flag"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'js-tokens@4.0.0/index'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}}}},"post":{"namespace-packages":{"plugin":{"name":"namespace-packages","config":{}},"logger":{"_msgs":[{"source":"namespace-packages","level":"info","things":["Namespaced package"]},{"source":"namespace-packages","level":"info","things":["Namespaced",0,"dependencies"]}]}},"inject-imports-dependencies":{"plugin":{"name":"inject-imports-dependencies","config":{}},"logger":{"_msgs":[]}},"inject-peer-dependencies":{"plugin":{"name":"inject-peer-dependencies","config":{}},"logger":{"_msgs":[]}}}},"name":"js-tokens","version":"4.0.0","allFiles":["CHANGELOG.md","LICENSE","README.md","index.js","package.json"],"copiedFiles":["CHANGELOG.md","LICENSE","README.md","index.js","package.json"]},"object-assign@4.1.1":{"id":"object-assign@4.1.1","process":{"copy":{"exclude-imports":{"plugin":{"name":"exclude-imports","config":{}},"logger":{"_msgs":[]}}},"pre":{"replace-browser-modules":{"plugin":{"name":"replace-browser-modules","config":{}},"logger":{"_msgs":[]}}},"babel":{"config":{"presets":["liferay-standard"],"babelrc":false,"compact":false,"only":"**/*","sourceMaps":true},"files":{"index.js":{"logger":{"_msgs":[{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'object-assign@4.1.1/index'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}}}},"post":{"namespace-packages":{"plugin":{"name":"namespace-packages","config":{}},"logger":{"_msgs":[{"source":"namespace-packages","level":"info","things":["Namespaced package"]},{"source":"namespace-packages","level":"info","things":["Namespaced",0,"dependencies"]}]}},"inject-imports-dependencies":{"plugin":{"name":"inject-imports-dependencies","config":{}},"logger":{"_msgs":[]}},"inject-peer-dependencies":{"plugin":{"name":"inject-peer-dependencies","config":{}},"logger":{"_msgs":[]}}}},"name":"object-assign","version":"4.1.1","allFiles":["index.js","license","package.json","readme.md"],"copiedFiles":["index.js","license","package.json","readme.md"]},"prop-types@15.7.2":{"id":"prop-types@15.7.2","process":{"copy":{"exclude-imports":{"plugin":{"name":"exclude-imports","config":{}},"logger":{"_msgs":[]}}},"pre":{"replace-browser-modules":{"plugin":{"name":"replace-browser-modules","config":{}},"logger":{"_msgs":[]}}},"babel":{"config":{"presets":["liferay-standard"],"babelrc":false,"compact":false,"only":"**/*","sourceMaps":true},"files":{"checkPropTypes.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",2,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './lib/ReactPropTypesSecret'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'prop-types@15.7.2/checkPropTypes'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"factory.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './factoryWithTypeCheckers'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'prop-types@15.7.2/factory'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"factoryWithThrowingShims.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './lib/ReactPropTypesSecret'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'prop-types@15.7.2/factoryWithThrowingShims'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"factoryWithTypeCheckers.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",4,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react-is', 'objective-react$object-assign', './lib/ReactPropTypesSecret', './checkPropTypes'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'prop-types@15.7.2/factoryWithTypeCheckers'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",2,"require() names"]}]}},"prop-types.min.js":{"logger":{"_msgs":[{"source":"wrap-modules-amd","level":"warn","things":["Module looks like a webpack bundle, local require() calls will be ignored"],"link":"https://github.com/liferay/liferay-js-toolkit/issues/389"},{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",2,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'prop-types@15.7.2/prop-types.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]},{"source":"wrap-modules-amd","level":"error","things":["Module has a non static require, which is not supported: module may fail when executed"],"link":"https://github.com/liferay/liferay-js-toolkit/issues/588"},{"source":"wrap-modules-amd","level":"error","things":["Module has a non static require, which is not supported: module may fail when executed"],"link":"https://github.com/liferay/liferay-js-toolkit/issues/588"}]}},"index.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",5,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react-is', './factoryWithTypeCheckers'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'prop-types@15.7.2/index'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]}]}},"lib/ReactPropTypesSecret.js":{"logger":{"_msgs":[{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'prop-types@15.7.2/lib/ReactPropTypesSecret'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"prop-types.js":{"logger":{"_msgs":[{"source":"wrap-modules-amd","level":"warn","things":["Module looks like a webpack bundle, local require() calls will be ignored"],"link":"https://github.com/liferay/liferay-js-toolkit/issues/389"},{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"add-module-metadata","level":"info","things":["Added 'esModule' flag"]},{"source":"normalize-requires","level":"info","things":["Normalized",17,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './lib/ReactPropTypesSecret', 'objective-react$react-is', 'objective-react$object-assign', './checkPropTypes', './factoryWithTypeCheckers', 'objective-react$_process', './cjs/react-is.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'prop-types@15.7.2/prop-types'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",5,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}}}},"post":{"namespace-packages":{"plugin":{"name":"namespace-packages","config":{}},"logger":{"_msgs":[{"source":"namespace-packages","level":"info","things":["Namespaced package"]},{"source":"namespace-packages","level":"info","things":["Namespaced",3,"dependencies"]}]}},"inject-imports-dependencies":{"plugin":{"name":"inject-imports-dependencies","config":{}},"logger":{"_msgs":[]}},"inject-peer-dependencies":{"plugin":{"name":"inject-peer-dependencies","config":{}},"logger":{"_msgs":[{"source":"inject-peer-dependencies","level":"warn","things":["Failed to resolve dependency","objective-react$_process","with error:",{"code":"MODULE_NOT_FOUND"}]}]}}}},"name":"prop-types","version":"15.7.2","allFiles":["CHANGELOG.md","LICENSE","README.md","checkPropTypes.js","factory.js","factoryWithThrowingShims.js","factoryWithTypeCheckers.js","index.js","package.json","prop-types.js","prop-types.min.js","lib/ReactPropTypesSecret.js"],"copiedFiles":["CHANGELOG.md","LICENSE","README.md","checkPropTypes.js","factory.js","factoryWithThrowingShims.js","factoryWithTypeCheckers.js","index.js","lib/ReactPropTypesSecret.js","package.json","prop-types.js","prop-types.min.js"]},"react-is@16.13.1":{"id":"react-is@16.13.1","process":{"copy":{"exclude-imports":{"plugin":{"name":"exclude-imports","config":{}},"logger":{"_msgs":[]}}},"pre":{"replace-browser-modules":{"plugin":{"name":"replace-browser-modules","config":{}},"logger":{"_msgs":[]}}},"babel":{"config":{"presets":["liferay-standard"],"babelrc":false,"compact":false,"only":"**/*","sourceMaps":true},"files":{"index.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/react-is.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-is@16.13.1/index'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"cjs/react-is.production.min.js":{"logger":{"_msgs":[{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-is@16.13.1/cjs/react-is.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"cjs/react-is.development.js":{"logger":{"_msgs":[{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-is@16.13.1/cjs/react-is.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"umd/react-is.development.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-is@16.13.1/umd/react-is.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-is.production.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-is@16.13.1/umd/react-is.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}}}},"post":{"namespace-packages":{"plugin":{"name":"namespace-packages","config":{}},"logger":{"_msgs":[{"source":"namespace-packages","level":"info","things":["Namespaced package"]},{"source":"namespace-packages","level":"info","things":["Namespaced",0,"dependencies"]}]}},"inject-imports-dependencies":{"plugin":{"name":"inject-imports-dependencies","config":{}},"logger":{"_msgs":[]}},"inject-peer-dependencies":{"plugin":{"name":"inject-peer-dependencies","config":{}},"logger":{"_msgs":[]}}}},"name":"react-is","version":"16.13.1","allFiles":["LICENSE","README.md","build-info.json","index.js","package.json","cjs/react-is.development.js","cjs/react-is.production.min.js","umd/react-is.development.js","umd/react-is.production.min.js"],"copiedFiles":["LICENSE","README.md","build-info.json","cjs/react-is.development.js","cjs/react-is.production.min.js","index.js","package.json","umd/react-is.development.js","umd/react-is.production.min.js"]},"scheduler@0.13.6":{"id":"scheduler@0.13.6","process":{"copy":{"exclude-imports":{"plugin":{"name":"exclude-imports","config":{}},"logger":{"_msgs":[]}}},"pre":{"replace-browser-modules":{"plugin":{"name":"replace-browser-modules","config":{}},"logger":{"_msgs":[]}}},"babel":{"config":{"presets":["liferay-standard"],"babelrc":false,"compact":false,"only":"**/*","sourceMaps":true},"files":{"tracing.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/scheduler-tracing.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/tracing'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"cjs/scheduler-tracing.development.js":{"logger":{"_msgs":[{"source":"add-module-metadata","level":"info","things":["Added 'esModule' flag"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/cjs/scheduler-tracing.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"cjs/scheduler-tracing.production.min.js":{"logger":{"_msgs":[{"source":"add-module-metadata","level":"info","things":["Added 'esModule' flag"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/cjs/scheduler-tracing.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"tracing-profiling.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/scheduler-tracing.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/tracing-profiling'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"index.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/scheduler.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/index'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"umd/scheduler-tracing.development.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/umd/scheduler-tracing.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"cjs/scheduler-tracing.profiling.min.js":{"logger":{"_msgs":[{"source":"add-module-metadata","level":"info","things":["Added 'esModule' flag"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/cjs/scheduler-tracing.profiling.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"cjs/scheduler.development.js":{"logger":{"_msgs":[{"source":"add-module-metadata","level":"info","things":["Added 'esModule' flag"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/cjs/scheduler.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"umd/scheduler-tracing.production.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/umd/scheduler-tracing.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"cjs/scheduler.production.min.js":{"logger":{"_msgs":[{"source":"add-module-metadata","level":"info","things":["Added 'esModule' flag"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/cjs/scheduler.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"umd/scheduler-tracing.profiling.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/umd/scheduler-tracing.profiling.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/scheduler.development.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/umd/scheduler.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/scheduler.production.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/umd/scheduler.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/scheduler.profiling.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'scheduler@0.13.6/umd/scheduler.profiling.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}}}},"post":{"namespace-packages":{"plugin":{"name":"namespace-packages","config":{}},"logger":{"_msgs":[{"source":"namespace-packages","level":"info","things":["Namespaced package"]},{"source":"namespace-packages","level":"info","things":["Namespaced",2,"dependencies"]}]}},"inject-imports-dependencies":{"plugin":{"name":"inject-imports-dependencies","config":{}},"logger":{"_msgs":[]}},"inject-peer-dependencies":{"plugin":{"name":"inject-peer-dependencies","config":{}},"logger":{"_msgs":[{"source":"inject-peer-dependencies","level":"info","things":["Injected dependency","objective-react$react@16.8.6"]}]}}}},"name":"scheduler","version":"0.13.6","allFiles":["LICENSE","README.md","build-info.json","index.js","package.json","tracing-profiling.js","tracing.js","cjs/scheduler-tracing.development.js","cjs/scheduler-tracing.production.min.js","cjs/scheduler-tracing.profiling.min.js","cjs/scheduler.development.js","cjs/scheduler.production.min.js","umd/scheduler-tracing.development.js","umd/scheduler-tracing.production.min.js","umd/scheduler-tracing.profiling.min.js","umd/scheduler.development.js","umd/scheduler.production.min.js","umd/scheduler.profiling.min.js"],"copiedFiles":["LICENSE","README.md","build-info.json","cjs/scheduler-tracing.development.js","cjs/scheduler-tracing.production.min.js","cjs/scheduler-tracing.profiling.min.js","cjs/scheduler.development.js","cjs/scheduler.production.min.js","index.js","package.json","tracing-profiling.js","tracing.js","umd/scheduler-tracing.development.js","umd/scheduler-tracing.production.min.js","umd/scheduler-tracing.profiling.min.js","umd/scheduler.development.js","umd/scheduler.production.min.js","umd/scheduler.profiling.min.js"]},"react-dom@16.8.6":{"id":"react-dom@16.8.6","process":{"copy":{"exclude-imports":{"plugin":{"name":"exclude-imports","config":{}},"logger":{"_msgs":[]}}},"pre":{"replace-browser-modules":{"plugin":{"name":"replace-browser-modules","config":{}},"logger":{"_msgs":[{"source":"replace-browser-modules","level":"info","things":["Redirected file 'server.js' to './server.browser.js' as configured in ''"],"link":"https://github.com/liferay/liferay-js-toolkit/wiki/Report-messages#0002"},{"source":"replace-browser-modules","level":"info","things":["Redirected file 'unstable-fizz.js' to './unstable-fizz.browser.js' as configured in ''"],"link":"https://github.com/liferay/liferay-js-toolkit/wiki/Report-messages#0002"}]}}},"babel":{"config":{"presets":["liferay-standard"],"babelrc":false,"compact":false,"only":"**/*","sourceMaps":true},"files":{"index.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/react-dom.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/index'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"profiling.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/react-dom.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/profiling'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"server.browser.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/react-dom-server.browser.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/server.browser'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"server.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './server.browser'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/server'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"server.node.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/react-dom-server.node.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/server.node'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"test-utils.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/react-dom-test-utils.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/test-utils'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"unstable-fizz.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './unstable-fizz.browser'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/unstable-fizz'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"unstable-fizz.node.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/react-dom-unstable-fizz.node.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/unstable-fizz.node'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"unstable-fizz.browser.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/react-dom-unstable-fizz.browser.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/unstable-fizz.browser'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"unstable-native-dependencies.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: './cjs/react-dom-unstable-native-dependencies.development'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/unstable-native-dependencies'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"cjs/react-dom-server.browser.production.min.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",2,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$object-assign', 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-server.browser.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",2,"require() names"]}]}},"cjs/react-dom-server.node.production.min.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$object-assign', 'objective-react$react', 'objective-react$stream'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-server.node.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",3,"require() names"]}]}},"cjs/react-dom-test-utils.development.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",6,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$object-assign', 'objective-react$react', 'objective-react$react-dom'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-test-utils.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",3,"require() names"]}]}},"cjs/react-dom-test-utils.production.min.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$object-assign', 'objective-react$react', 'objective-react$react-dom'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-test-utils.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",3,"require() names"]}]}},"cjs/react-dom-server.node.development.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",8,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$object-assign', 'objective-react$react', 'objective-react$prop-types/checkPropTypes', 'objective-react$stream'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-server.node.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",4,"require() names"]}]}},"cjs/react-dom-server.browser.development.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",6,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$object-assign', 'objective-react$react', 'objective-react$prop-types/checkPropTypes'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-server.browser.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",3,"require() names"]}]}},"cjs/react-dom-unstable-fizz.browser.development.js":{"logger":{"_msgs":[{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fizz.browser.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"cjs/react-dom-unstable-fizz.browser.production.min.js":{"logger":{"_msgs":[{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fizz.browser.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"cjs/react-dom-unstable-fizz.node.development.js":{"logger":{"_msgs":[{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fizz.node.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"cjs/react-dom-unstable-fizz.node.production.min.js":{"logger":{"_msgs":[{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fizz.node.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]}]}},"cjs/react-dom-unstable-fire.production.min.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react', 'objective-react$object-assign', 'objective-react$scheduler'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fire.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",3,"require() names"]}]}},"cjs/react-dom-unstable-native-dependencies.production.min.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",2,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react-dom', 'objective-react$object-assign'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-native-dependencies.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",2,"require() names"]}]}},"cjs/react-dom-unstable-fire.profiling.min.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",4,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react', 'objective-react$object-assign', 'objective-react$scheduler', 'objective-react$scheduler/tracing'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fire.profiling.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",4,"require() names"]}]}},"cjs/react-dom-unstable-native-dependencies.development.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",4,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react-dom', 'objective-react$object-assign'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-native-dependencies.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",2,"require() names"]}]}},"cjs/react-dom.production.min.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",3,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react', 'objective-react$object-assign', 'objective-react$scheduler'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",3,"require() names"]}]}},"cjs/react-dom.profiling.min.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",4,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react', 'objective-react$object-assign', 'objective-react$scheduler', 'objective-react$scheduler/tracing'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom.profiling.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",4,"require() names"]}]}},"umd/react-dom-server.browser.production.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom-server.browser.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-dom-test-utils.development.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",2,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react', 'objective-react$react-dom'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom-test-utils.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",2,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-dom-server.browser.development.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom-server.browser.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-dom-test-utils.production.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",2,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react', 'objective-react$react-dom'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom-test-utils.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",2,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-dom-unstable-fire.production.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-fire.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-dom-unstable-fire.profiling.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-fire.profiling.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-dom-unstable-fizz.browser.production.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-fizz.browser.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-dom-unstable-fizz.browser.development.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"wrap-modules-amd","level":"info","things":["No dependencies detected"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-fizz.browser.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",0,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-dom-unstable-native-dependencies.production.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",2,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react-dom', 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-native-dependencies.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",2,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-dom-unstable-native-dependencies.development.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",2,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react-dom', 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-native-dependencies.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",2,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-dom.production.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom.production.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-dom.profiling.min.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom.profiling.min'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"cjs/react-dom-unstable-fire.development.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",10,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react', 'objective-react$object-assign', 'objective-react$prop-types/checkPropTypes', 'objective-react$scheduler', 'objective-react$scheduler/tracing'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fire.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",5,"require() names"]}]}},"cjs/react-dom.development.js":{"logger":{"_msgs":[{"source":"normalize-requires","level":"info","things":["Normalized",10,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react', 'objective-react$object-assign', 'objective-react$prop-types/checkPropTypes', 'objective-react$scheduler', 'objective-react$scheduler/tracing'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/cjs/react-dom.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",5,"require() names"]}]}},"umd/react-dom-unstable-fire.development.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-fire.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}},"umd/react-dom.development.js":{"logger":{"_msgs":[{"source":"namespace-amd-define","level":"warn","things":["Found",1,"define() calls inside the module definition","which have been ignored as they should never","be executed during runtime"]},{"source":"normalize-requires","level":"info","things":["Normalized",1,"requires"]},{"source":"wrap-modules-amd","level":"info","things":["Detected dependencies: 'objective-react$react'"]},{"source":"name-amd-modules","level":"info","things":["Set module name to 'react-dom@16.8.6/umd/react-dom.development'"]},{"source":"namespace-modules","level":"info","things":["Namespaced",1,"define() names,",0,"define() dependencies,","and",1,"require() names"]},{"source":"namespace-amd-define","level":"info","things":["Namespaced first AMD define in file"]}]}}}},"post":{"namespace-packages":{"plugin":{"name":"namespace-packages","config":{}},"logger":{"_msgs":[{"source":"namespace-packages","level":"info","things":["Namespaced package"]},{"source":"namespace-packages","level":"info","things":["Namespaced",4,"dependencies"]}]}},"inject-imports-dependencies":{"plugin":{"name":"inject-imports-dependencies","config":{}},"logger":{"_msgs":[]}},"inject-peer-dependencies":{"plugin":{"name":"inject-peer-dependencies","config":{}},"logger":{"_msgs":[{"source":"inject-peer-dependencies","level":"warn","things":["Failed to resolve dependency","objective-react$stream","with error:",{"code":"MODULE_NOT_FOUND"}]},{"source":"inject-peer-dependencies","level":"info","things":["Injected dependency","objective-react$react@16.8.6"]},{"source":"inject-peer-dependencies","level":"info","things":["Injected dependency","objective-react$react-dom@16.8.6"]}]}}}},"name":"react-dom","version":"16.8.6","allFiles":["LICENSE","README.md","build-info.json","index.js","package.json","profiling.js","server.browser.js","server.js","server.node.js","test-utils.js","unstable-fizz.browser.js","unstable-fizz.js","unstable-fizz.node.js","unstable-native-dependencies.js","cjs/react-dom-server.browser.development.js","cjs/react-dom-server.browser.production.min.js","cjs/react-dom-server.node.development.js","cjs/react-dom-server.node.production.min.js","cjs/react-dom-test-utils.development.js","cjs/react-dom-test-utils.production.min.js","cjs/react-dom-unstable-fire.development.js","cjs/react-dom-unstable-fire.production.min.js","cjs/react-dom-unstable-fire.profiling.min.js","cjs/react-dom-unstable-fizz.browser.development.js","cjs/react-dom-unstable-fizz.browser.production.min.js","cjs/react-dom-unstable-fizz.node.development.js","cjs/react-dom-unstable-fizz.node.production.min.js","cjs/react-dom-unstable-native-dependencies.development.js","cjs/react-dom-unstable-native-dependencies.production.min.js","cjs/react-dom.development.js","cjs/react-dom.production.min.js","cjs/react-dom.profiling.min.js","umd/react-dom-server.browser.development.js","umd/react-dom-server.browser.production.min.js","umd/react-dom-test-utils.development.js","umd/react-dom-test-utils.production.min.js","umd/react-dom-unstable-fire.development.js","umd/react-dom-unstable-fire.production.min.js","umd/react-dom-unstable-fire.profiling.min.js","umd/react-dom-unstable-fizz.browser.development.js","umd/react-dom-unstable-fizz.browser.production.min.js","umd/react-dom-unstable-native-dependencies.development.js","umd/react-dom-unstable-native-dependencies.production.min.js","umd/react-dom.development.js","umd/react-dom.production.min.js","umd/react-dom.profiling.min.js"],"copiedFiles":["LICENSE","README.md","build-info.json","cjs/react-dom-server.browser.development.js","cjs/react-dom-server.browser.production.min.js","cjs/react-dom-server.node.development.js","cjs/react-dom-server.node.production.min.js","cjs/react-dom-test-utils.development.js","cjs/react-dom-test-utils.production.min.js","cjs/react-dom-unstable-fire.development.js","cjs/react-dom-unstable-fire.production.min.js","cjs/react-dom-unstable-fire.profiling.min.js","cjs/react-dom-unstable-fizz.browser.development.js","cjs/react-dom-unstable-fizz.browser.production.min.js","cjs/react-dom-unstable-fizz.node.development.js","cjs/react-dom-unstable-fizz.node.production.min.js","cjs/react-dom-unstable-native-dependencies.development.js","cjs/react-dom-unstable-native-dependencies.production.min.js","cjs/react-dom.development.js","cjs/react-dom.production.min.js","cjs/react-dom.profiling.min.js","index.js","package.json","profiling.js","server.browser.js","server.js","server.node.js","test-utils.js","umd/react-dom-server.browser.development.js","umd/react-dom-server.browser.production.min.js","umd/react-dom-test-utils.development.js","umd/react-dom-test-utils.production.min.js","umd/react-dom-unstable-fire.development.js","umd/react-dom-unstable-fire.production.min.js","umd/react-dom-unstable-fire.profiling.min.js","umd/react-dom-unstable-fizz.browser.development.js","umd/react-dom-unstable-fizz.browser.production.min.js","umd/react-dom-unstable-native-dependencies.development.js","umd/react-dom-unstable-native-dependencies.production.min.js","umd/react-dom.development.js","umd/react-dom.production.min.js","umd/react-dom.profiling.min.js","unstable-fizz.browser.js","unstable-fizz.js","unstable-fizz.node.js","unstable-native-dependencies.js"]}},"_rules":{"config":[],"files":{}},"_warnings":["There are warnings for some of the Babel plugins: please check details of Babel transformations.","There are warnings for some of the liferay-npm-bundler plugins: please check details of bundler transformations.","There are errors for some of the Babel plugins: please check details of Babel transformations."],"_executionTime":[23,755881078]}
+				</script>
+				<script>
+					window.report = JSON.parse(
+						document.getElementById("report").innerHTML
+					);
+				</script>
+				<script>
+					window.onload = function() {
+						var style = document.createElement('style');
+
+						style.innerHTML = '';
+
+						document.head.appendChild(style);
+
+						var select = document.getElementById('log-level-select');
+
+						select.value = 'info';
+
+						select.onchange = function() {
+							switch(select.value) {
+								case 'info':
+									style.innerHTML = '';
+									break;
+
+								case 'warn':
+									style.innerHTML = 
+										'tr.info {display: none;}';
+									break;
+
+								case 'error':
+									style.innerHTML = 
+										'tr.info {display: none;} ' +
+										'tr.warn {display: none;}';
+									break;
+							}
+						};
+					}
+				</script>
+			</head>
+			<body>
+				<div id='log-level-selector'>
+					Log level filter: 
+					<select id='log-level-select'>
+						<option>info</option>
+						<option>warn</option>
+						<option>error</option>
+					</select>
+				</div>
+				
+				<h1>Report of liferay-npm-bundler execution</h1>
+				
+			<table>
+				<tr class=""><td>Executed at:</td><td>Wed, 22 Jul 2020 14:32:26 GMT</td></tr>
+<tr class=""><td>Execution took:</td><td>24s</td></tr>
+			</table>
+		
+				
+		<h2>Warnings</h2>
+		
+		<ul>
+			<li>There are warnings for some of the Babel plugins: please check details of Babel transformations.</li> <li>There are warnings for some of the liferay-npm-bundler plugins: please check details of bundler transformations.</li> <li>There are errors for some of the Babel plugins: please check details of Babel transformations.</li>
+		</ul>
+	
+	
+				
+		<h2>Bundler environment versions</h2>
+		
+			<table>
+				<tr class=""><th>Package</th>
+<th>Version</th></tr>
+				<tr class="">
+					<td>liferay-npm-bundler</td>
+					<td>2.18.8</td>
+				</tr>
+<tr class="">
+					<td>liferay-npm-build-tools-common</td>
+					<td>2.18.8</td>
+				</tr>
+<tr class="">
+					<td>liferay-npm-bundler-plugin-resolve-linked-dependencies</td>
+					<td>2.18.8</td>
+				</tr>
+<tr class="">
+					<td>liferay-npm-bundler-plugin-namespace-packages</td>
+					<td>2.18.8</td>
+				</tr>
+<tr class="">
+					<td>liferay-npm-bundler-plugin-inject-imports-dependencies</td>
+					<td>2.18.8</td>
+				</tr>
+<tr class="">
+					<td>babel-preset-liferay-standard</td>
+					<td>2.18.8</td>
+				</tr>
+<tr class="">
+					<td>liferay-npm-bundler-plugin-replace-browser-modules</td>
+					<td>2.18.8</td>
+				</tr>
+<tr class="">
+					<td>liferay-npm-bundler-plugin-inject-peer-dependencies</td>
+					<td>2.18.8</td>
+				</tr>
+			</table>
+		
+	
+				
+		<h2>Bundled packages</h2>
+		
+			<table>
+				<tr class=""><th>Package</th>
+<th>Version</th>
+<th>Copied files</th>
+<th>Excluded files</th>
+<th>Linked to</th></tr>
+				<tr class="">
+						<td>objective-react</td>
+						<td>1.0.0</td>
+						<td><div title="package.json">
+									1
+								</div></td>
+						<td>
+							<div title="">
+										0
+									</div>
+						</td>
+						<td></td>
+					</tr>
+<tr class="">
+						<td>js-tokens</td>
+						<td>4.0.0</td>
+						<td><div title="CHANGELOG.md,LICENSE,README.md,index.js,package.json">
+									5
+								</div></td>
+						<td>
+							<div title="">
+										0
+									</div>
+						</td>
+						<td></td>
+					</tr>
+<tr class="">
+						<td>loose-envify</td>
+						<td>1.4.0</td>
+						<td><div title="LICENSE,README.md,cli.js,custom.js,index.js,loose-envify.js,package.json,replace.js">
+									8
+								</div></td>
+						<td>
+							<div title="">
+										0
+									</div>
+						</td>
+						<td></td>
+					</tr>
+<tr class="">
+						<td>object-assign</td>
+						<td>4.1.1</td>
+						<td><div title="index.js,license,package.json,readme.md">
+									4
+								</div></td>
+						<td>
+							<div title="">
+										0
+									</div>
+						</td>
+						<td></td>
+					</tr>
+<tr class="">
+						<td>prop-types</td>
+						<td>15.7.2</td>
+						<td><div title="CHANGELOG.md,LICENSE,README.md,checkPropTypes.js,factory.js,factoryWithThrowingShims.js,factoryWithTypeCheckers.js,index.js,lib/ReactPropTypesSecret.js,package.json,prop-types.js,prop-types.min.js">
+									12
+								</div></td>
+						<td>
+							<div title="">
+										0
+									</div>
+						</td>
+						<td></td>
+					</tr>
+<tr class="">
+						<td>react-dom</td>
+						<td>16.8.6</td>
+						<td><div title="LICENSE,README.md,build-info.json,cjs/react-dom-server.browser.development.js,cjs/react-dom-server.browser.production.min.js,cjs/react-dom-server.node.development.js,cjs/react-dom-server.node.production.min.js,cjs/react-dom-test-utils.development.js,cjs/react-dom-test-utils.production.min.js,cjs/react-dom-unstable-fire.development.js,cjs/react-dom-unstable-fire.production.min.js,cjs/react-dom-unstable-fire.profiling.min.js,cjs/react-dom-unstable-fizz.browser.development.js,cjs/react-dom-unstable-fizz.browser.production.min.js,cjs/react-dom-unstable-fizz.node.development.js,cjs/react-dom-unstable-fizz.node.production.min.js,cjs/react-dom-unstable-native-dependencies.development.js,cjs/react-dom-unstable-native-dependencies.production.min.js,cjs/react-dom.development.js,cjs/react-dom.production.min.js,cjs/react-dom.profiling.min.js,index.js,package.json,profiling.js,server.browser.js,server.js,server.node.js,test-utils.js,umd/react-dom-server.browser.development.js,umd/react-dom-server.browser.production.min.js,umd/react-dom-test-utils.development.js,umd/react-dom-test-utils.production.min.js,umd/react-dom-unstable-fire.development.js,umd/react-dom-unstable-fire.production.min.js,umd/react-dom-unstable-fire.profiling.min.js,umd/react-dom-unstable-fizz.browser.development.js,umd/react-dom-unstable-fizz.browser.production.min.js,umd/react-dom-unstable-native-dependencies.development.js,umd/react-dom-unstable-native-dependencies.production.min.js,umd/react-dom.development.js,umd/react-dom.production.min.js,umd/react-dom.profiling.min.js,unstable-fizz.browser.js,unstable-fizz.js,unstable-fizz.node.js,unstable-native-dependencies.js">
+									46
+								</div></td>
+						<td>
+							<div title="">
+										0
+									</div>
+						</td>
+						<td></td>
+					</tr>
+<tr class="">
+						<td>react-is</td>
+						<td>16.13.1</td>
+						<td><div title="LICENSE,README.md,build-info.json,cjs/react-is.development.js,cjs/react-is.production.min.js,index.js,package.json,umd/react-is.development.js,umd/react-is.production.min.js">
+									9
+								</div></td>
+						<td>
+							<div title="">
+										0
+									</div>
+						</td>
+						<td></td>
+					</tr>
+<tr class="">
+						<td>react</td>
+						<td>16.8.6</td>
+						<td><div title="LICENSE,README.md,build-info.json,cjs/react.development.js,cjs/react.production.min.js,index.js,package.json,umd/react.development.js,umd/react.production.min.js,umd/react.profiling.min.js">
+									10
+								</div></td>
+						<td>
+							<div title="">
+										0
+									</div>
+						</td>
+						<td></td>
+					</tr>
+<tr class="">
+						<td>scheduler</td>
+						<td>0.13.6</td>
+						<td><div title="LICENSE,README.md,build-info.json,cjs/scheduler-tracing.development.js,cjs/scheduler-tracing.production.min.js,cjs/scheduler-tracing.profiling.min.js,cjs/scheduler.development.js,cjs/scheduler.production.min.js,index.js,package.json,tracing-profiling.js,tracing.js,umd/scheduler-tracing.development.js,umd/scheduler-tracing.production.min.js,umd/scheduler-tracing.profiling.min.js,umd/scheduler.development.js,umd/scheduler.production.min.js,umd/scheduler.profiling.min.js">
+									18
+								</div></td>
+						<td>
+							<div title="">
+										0
+									</div>
+						</td>
+						<td></td>
+					</tr>
+			</table>
+		
+	
+				
+		<h2>Details of rule executions</h2>
+		
+		<div class="configuration">
+			<div>Configuration</div>
+			<pre>[]</pre>
+		</div>
+		
+
+			<table>
+				<tr class=""><th>File</th>
+<th>Log source</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				
+			</table>
+		
+	
+				
+						
+		<h2>Summary of package transformations</h2>
+		
+			<table>
+				<tr class=""><th>Package</th>
+<th>Version</th>
+<th>Copy phase</th>
+<th>Pre-babel phase</th>
+<th>Babel phase</th>
+<th>Post-babel phase</th></tr>
+				<tr class="">
+						<td>objective-react</td>
+						<td>1.0.0</td>
+						<td>
+							<a href="#/-bundler">
+								
+							</a>
+						</td>
+						<td>
+							<a href="#/-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#/-babel">
+								2 files processed
+							</a>
+						</td>
+						<td>
+							<a href="#/-bundler">
+								2 plugins applied
+							</a>
+						</td>
+					</tr>
+<tr class="">
+						<td>js-tokens</td>
+						<td>4.0.0</td>
+						<td>
+							<a href="#js-tokens@4.0.0-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#js-tokens@4.0.0-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#js-tokens@4.0.0-babel">
+								1 files processed
+							</a>
+						</td>
+						<td>
+							<a href="#js-tokens@4.0.0-bundler">
+								3 plugins applied
+							</a>
+						</td>
+					</tr>
+<tr class="">
+						<td>loose-envify</td>
+						<td>1.4.0</td>
+						<td>
+							<a href="#loose-envify@1.4.0-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#loose-envify@1.4.0-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#loose-envify@1.4.0-babel">
+								5 files processed
+							</a>
+						</td>
+						<td>
+							<a href="#loose-envify@1.4.0-bundler">
+								3 plugins applied
+							</a>
+						</td>
+					</tr>
+<tr class="">
+						<td>object-assign</td>
+						<td>4.1.1</td>
+						<td>
+							<a href="#object-assign@4.1.1-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#object-assign@4.1.1-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#object-assign@4.1.1-babel">
+								1 files processed
+							</a>
+						</td>
+						<td>
+							<a href="#object-assign@4.1.1-bundler">
+								3 plugins applied
+							</a>
+						</td>
+					</tr>
+<tr class="">
+						<td>prop-types</td>
+						<td>15.7.2</td>
+						<td>
+							<a href="#prop-types@15.7.2-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#prop-types@15.7.2-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#prop-types@15.7.2-babel">
+								8 files processed
+							</a>
+						</td>
+						<td>
+							<a href="#prop-types@15.7.2-bundler">
+								3 plugins applied
+							</a>
+						</td>
+					</tr>
+<tr class="">
+						<td>react-dom</td>
+						<td>16.8.6</td>
+						<td>
+							<a href="#react-dom@16.8.6-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#react-dom@16.8.6-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#react-dom@16.8.6-babel">
+								42 files processed
+							</a>
+						</td>
+						<td>
+							<a href="#react-dom@16.8.6-bundler">
+								3 plugins applied
+							</a>
+						</td>
+					</tr>
+<tr class="">
+						<td>react-is</td>
+						<td>16.13.1</td>
+						<td>
+							<a href="#react-is@16.13.1-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#react-is@16.13.1-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#react-is@16.13.1-babel">
+								5 files processed
+							</a>
+						</td>
+						<td>
+							<a href="#react-is@16.13.1-bundler">
+								3 plugins applied
+							</a>
+						</td>
+					</tr>
+<tr class="">
+						<td>react</td>
+						<td>16.8.6</td>
+						<td>
+							<a href="#react@16.8.6-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#react@16.8.6-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#react@16.8.6-babel">
+								6 files processed
+							</a>
+						</td>
+						<td>
+							<a href="#react@16.8.6-bundler">
+								3 plugins applied
+							</a>
+						</td>
+					</tr>
+<tr class="">
+						<td>scheduler</td>
+						<td>0.13.6</td>
+						<td>
+							<a href="#scheduler@0.13.6-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#scheduler@0.13.6-bundler">
+								1 plugins applied
+							</a>
+						</td>
+						<td>
+							<a href="#scheduler@0.13.6-babel">
+								14 files processed
+							</a>
+						</td>
+						<td>
+							<a href="#scheduler@0.13.6-bundler">
+								3 plugins applied
+							</a>
+						</td>
+					</tr>
+			</table>
+		
+	
+						
+		<h2>Details of bundler transformations</h2>
+		
+		<h3>
+							<a name="/-bundler">
+								objective-react@1.0.0
+							</a>
+						</h3>
+		
+			<table>
+				<tr class=""><th>Pre-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>resolve-linked-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-imports-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>namespace-packages</td> <td>{}</td>
+					
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Namespaced 2 dependencies</td>
+				</tr>
+			</table>
+		
+	
+
+		<h3>
+							<a name="js-tokens@4.0.0-bundler">
+								js-tokens@4.0.0
+							</a>
+						</h3>
+		
+			<table>
+				<tr class=""><th>Copy phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>exclude-imports</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Pre-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>replace-browser-modules</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-imports-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-peer-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>namespace-packages</td> <td>{}</td>
+					
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Namespaced package</td>
+				</tr>
+<tr class="info">
+						<td></td> <td></td>
+						
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 0 dependencies</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+							<a name="loose-envify@1.4.0-bundler">
+								loose-envify@1.4.0
+							</a>
+						</h3>
+		
+			<table>
+				<tr class=""><th>Copy phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>exclude-imports</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Pre-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>replace-browser-modules</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-imports-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="warn">
+					<td>inject-peer-dependencies</td> <td>{}</td>
+					
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Failed to resolve dependency objective-react$fs with error: Error: Cannot find module 'fs/package.json' from './node_modules/loose-envify'</td>
+				</tr>
+<tr class="warn">
+						<td></td> <td></td>
+						
+						<td class="warn">
+							WARN
+						</td>
+						<td></td>
+						<td>Failed to resolve dependency objective-react$stream with error: Error: Cannot find module 'stream/package.json' from './node_modules/loose-envify'</td>
+					</tr>
+<tr class="info">
+						<td></td> <td></td>
+						
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Injected dependency objective-react$util@0.11.1</td>
+					</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>namespace-packages</td> <td>{}</td>
+					
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Namespaced package</td>
+				</tr>
+<tr class="info">
+						<td></td> <td></td>
+						
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 dependencies</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+							<a name="object-assign@4.1.1-bundler">
+								object-assign@4.1.1
+							</a>
+						</h3>
+		
+			<table>
+				<tr class=""><th>Copy phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>exclude-imports</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Pre-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>replace-browser-modules</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-imports-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-peer-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>namespace-packages</td> <td>{}</td>
+					
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Namespaced package</td>
+				</tr>
+<tr class="info">
+						<td></td> <td></td>
+						
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 0 dependencies</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+							<a name="prop-types@15.7.2-bundler">
+								prop-types@15.7.2
+							</a>
+						</h3>
+		
+			<table>
+				<tr class=""><th>Copy phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>exclude-imports</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Pre-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>replace-browser-modules</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-imports-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="warn">
+					<td>inject-peer-dependencies</td> <td>{}</td>
+					
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Failed to resolve dependency objective-react$_process with error: Error: Cannot find module '_process/package.json' from './node_modules/prop-types'</td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>namespace-packages</td> <td>{}</td>
+					
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Namespaced package</td>
+				</tr>
+<tr class="info">
+						<td></td> <td></td>
+						
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 3 dependencies</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+							<a name="react-dom@16.8.6-bundler">
+								react-dom@16.8.6
+							</a>
+						</h3>
+		
+			<table>
+				<tr class=""><th>Copy phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>exclude-imports</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Pre-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>replace-browser-modules</td> <td>{}</td>
+					
+					<td class="info">INFO</td>
+					<td><a href='https://github.com/liferay/liferay-js-toolkit/wiki/Report-messages#0002'>🛈</a></td>
+					<td>Redirected file 'server.js' to './server.browser.js' as configured in ''</td>
+				</tr>
+<tr class="info">
+						<td></td> <td></td>
+						
+						<td class="info">
+							INFO
+						</td>
+						<td><a href='https://github.com/liferay/liferay-js-toolkit/wiki/Report-messages#0002'>🛈</a></td>
+						<td>Redirected file 'unstable-fizz.js' to './unstable-fizz.browser.js' as configured in ''</td>
+					</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-imports-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="warn">
+					<td>inject-peer-dependencies</td> <td>{}</td>
+					
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Failed to resolve dependency objective-react$stream with error: Error: Cannot find module 'stream/package.json' from './node_modules/react-dom'</td>
+				</tr>
+<tr class="info">
+						<td></td> <td></td>
+						
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Injected dependency objective-react$react@16.8.6</td>
+					</tr>
+<tr class="info">
+						<td></td> <td></td>
+						
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Injected dependency objective-react$react-dom@16.8.6</td>
+					</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>namespace-packages</td> <td>{}</td>
+					
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Namespaced package</td>
+				</tr>
+<tr class="info">
+						<td></td> <td></td>
+						
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 4 dependencies</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+							<a name="react-is@16.13.1-bundler">
+								react-is@16.13.1
+							</a>
+						</h3>
+		
+			<table>
+				<tr class=""><th>Copy phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>exclude-imports</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Pre-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>replace-browser-modules</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-imports-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-peer-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>namespace-packages</td> <td>{}</td>
+					
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Namespaced package</td>
+				</tr>
+<tr class="info">
+						<td></td> <td></td>
+						
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 0 dependencies</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+							<a name="react@16.8.6-bundler">
+								react@16.8.6
+							</a>
+						</h3>
+		
+			<table>
+				<tr class=""><th>Copy phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>exclude-imports</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Pre-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>replace-browser-modules</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-imports-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-peer-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>namespace-packages</td> <td>{}</td>
+					
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Namespaced package</td>
+				</tr>
+<tr class="info">
+						<td></td> <td></td>
+						
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 4 dependencies</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+							<a name="scheduler@0.13.6-bundler">
+								scheduler@0.13.6
+							</a>
+						</h3>
+		
+			<table>
+				<tr class=""><th>Copy phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>exclude-imports</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Pre-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>replace-browser-modules</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="">
+					<td>inject-imports-dependencies</td> <td>{}</td>
+					
+					<td></td> <td></td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>inject-peer-dependencies</td> <td>{}</td>
+					
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Injected dependency objective-react$react@16.8.6</td>
+				</tr>
+			</table>
+		
+
+			<table>
+				<tr class=""><th>Post-phase plugin</th>
+<th>Config</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>namespace-packages</td> <td>{}</td>
+					
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Namespaced package</td>
+				</tr>
+<tr class="info">
+						<td></td> <td></td>
+						
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 2 dependencies</td>
+					</tr>
+			</table>
+		
+	
+	
+						
+		<h2>Details of Babel transformations</h2>
+		
+		<h3>
+						<a name="/-babel">
+							objective-react@1.0.0
+						</a>
+						</h3>
+		
+						<div class="configuration">
+							<div>Configuration</div>
+							<pre>{
+  "presets": [
+    "liferay-standard"
+  ],
+  "babelrc": false,
+  "compact": false,
+  "only": "**/*",
+  "sourceMaps": true
+}</pre>
+						</div>
+						
+
+			<table>
+				<tr class=""><th>File</th>
+<th>Log source</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>AppComponent.js</td>
+					<td class="source">add-module-metadata</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Added 'esModule' flag</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 2 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react', 'objective-react$react-dom'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'objective-react@1.0.0/AppComponent'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 0 define() names, 0 define() dependencies, and 2 require() names</td>
+					</tr>
+<tr class="info">
+					<td>index.js</td>
+					<td class="source">add-module-metadata</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Added 'esModule' flag</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 3 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react', 'objective-react$react-dom', './AppComponent'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'objective-react@1.0.0/index'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 0 define() names, 0 define() dependencies, and 2 require() names</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+						<a name="js-tokens@4.0.0-babel">
+							js-tokens@4.0.0
+						</a>
+						</h3>
+		
+						<div class="configuration">
+							<div>Configuration</div>
+							<pre>{
+  "presets": [
+    "liferay-standard"
+  ],
+  "babelrc": false,
+  "compact": false,
+  "only": "**/*",
+  "sourceMaps": true
+}</pre>
+						</div>
+						
+
+			<table>
+				<tr class=""><th>File</th>
+<th>Log source</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>index.js</td>
+					<td class="source">add-module-metadata</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Added 'esModule' flag</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'js-tokens@4.0.0/index'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+						<a name="loose-envify@1.4.0-babel">
+							loose-envify@1.4.0
+						</a>
+						</h3>
+		
+						<div class="configuration">
+							<div>Configuration</div>
+							<pre>{
+  "presets": [
+    "liferay-standard"
+  ],
+  "babelrc": false,
+  "compact": false,
+  "only": "**/*",
+  "sourceMaps": true
+}</pre>
+						</div>
+						
+
+			<table>
+				<tr class=""><th>File</th>
+<th>Log source</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>cli.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 2 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: '.', 'objective-react$fs'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'loose-envify@1.4.0/cli'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+					<td>custom.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 1 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './loose-envify'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'loose-envify@1.4.0/custom'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>index.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 1 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './loose-envify'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'loose-envify@1.4.0/index'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>loose-envify.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$stream', 'objective-react$util', './replace'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'loose-envify@1.4.0/loose-envify'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 2 require() names</td>
+					</tr>
+<tr class="info">
+					<td>replace.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 1 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$js-tokens'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'loose-envify@1.4.0/replace'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+						<a name="object-assign@4.1.1-babel">
+							object-assign@4.1.1
+						</a>
+						</h3>
+		
+						<div class="configuration">
+							<div>Configuration</div>
+							<pre>{
+  "presets": [
+    "liferay-standard"
+  ],
+  "babelrc": false,
+  "compact": false,
+  "only": "**/*",
+  "sourceMaps": true
+}</pre>
+						</div>
+						
+
+			<table>
+				<tr class=""><th>File</th>
+<th>Log source</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>index.js</td>
+					<td class="source">wrap-modules-amd</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>No dependencies detected</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'object-assign@4.1.1/index'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+						<a name="prop-types@15.7.2-babel">
+							prop-types@15.7.2
+						</a>
+						</h3>
+		
+						<div class="configuration">
+							<div>Configuration</div>
+							<pre>{
+  "presets": [
+    "liferay-standard"
+  ],
+  "babelrc": false,
+  "compact": false,
+  "only": "**/*",
+  "sourceMaps": true
+}</pre>
+						</div>
+						
+
+			<table>
+				<tr class=""><th>File</th>
+<th>Log source</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>checkPropTypes.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 2 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './lib/ReactPropTypesSecret'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'prop-types@15.7.2/checkPropTypes'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>factory.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 1 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './factoryWithTypeCheckers'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'prop-types@15.7.2/factory'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>factoryWithThrowingShims.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 1 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './lib/ReactPropTypesSecret'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'prop-types@15.7.2/factoryWithThrowingShims'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>factoryWithTypeCheckers.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 4 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react-is', 'objective-react$object-assign', './lib/ReactPropTypesSecret', './checkPropTypes'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'prop-types@15.7.2/factoryWithTypeCheckers'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 2 require() names</td>
+					</tr>
+<tr class="info">
+					<td>index.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 5 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react-is', './factoryWithTypeCheckers'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'prop-types@15.7.2/index'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+					<td>lib/ReactPropTypesSecret.js</td>
+					<td class="source">wrap-modules-amd</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>No dependencies detected</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'prop-types@15.7.2/lib/ReactPropTypesSecret'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="warn">
+					<td>prop-types.js</td>
+					<td class="source">wrap-modules-amd</td>
+					<td class="warn">WARN</td>
+					<td><a href='https://github.com/liferay/liferay-js-toolkit/issues/389'>🛈</a></td>
+					<td>Module looks like a webpack bundle, local require() calls will be ignored</td>
+				</tr>
+<tr class="warn">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="warn">
+							WARN
+						</td>
+						<td></td>
+						<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">add-module-metadata</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Added 'esModule' flag</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 17 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './lib/ReactPropTypesSecret', 'objective-react$react-is', 'objective-react$object-assign', './checkPropTypes', './factoryWithTypeCheckers', 'objective-react$_process', './cjs/react-is.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'prop-types@15.7.2/prop-types'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 5 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>prop-types.min.js</td>
+					<td class="source">wrap-modules-amd</td>
+					<td class="warn">WARN</td>
+					<td><a href='https://github.com/liferay/liferay-js-toolkit/issues/389'>🛈</a></td>
+					<td>Module looks like a webpack bundle, local require() calls will be ignored</td>
+				</tr>
+<tr class="warn">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="warn">
+							WARN
+						</td>
+						<td></td>
+						<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 2 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'prop-types@15.7.2/prop-types.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="error">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="error">
+							ERROR
+						</td>
+						<td><a href='https://github.com/liferay/liferay-js-toolkit/issues/588'>🛈</a></td>
+						<td>Module has a non static require, which is not supported: module may fail when executed</td>
+					</tr>
+<tr class="error">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="error">
+							ERROR
+						</td>
+						<td><a href='https://github.com/liferay/liferay-js-toolkit/issues/588'>🛈</a></td>
+						<td>Module has a non static require, which is not supported: module may fail when executed</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+						<a name="react-dom@16.8.6-babel">
+							react-dom@16.8.6
+						</a>
+						</h3>
+		
+						<div class="configuration">
+							<div>Configuration</div>
+							<pre>{
+  "presets": [
+    "liferay-standard"
+  ],
+  "babelrc": false,
+  "compact": false,
+  "only": "**/*",
+  "sourceMaps": true
+}</pre>
+						</div>
+						
+
+			<table>
+				<tr class=""><th>File</th>
+<th>Log source</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>cjs/react-dom-server.browser.development.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 6 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$object-assign', 'objective-react$react', 'objective-react$prop-types/checkPropTypes'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-server.browser.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 3 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-server.browser.production.min.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 2 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$object-assign', 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-server.browser.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 2 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-server.node.development.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 8 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$object-assign', 'objective-react$react', 'objective-react$prop-types/checkPropTypes', 'objective-react$stream'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-server.node.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 4 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-server.node.production.min.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$object-assign', 'objective-react$react', 'objective-react$stream'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-server.node.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 3 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-test-utils.development.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 6 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$object-assign', 'objective-react$react', 'objective-react$react-dom'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-test-utils.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 3 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-test-utils.production.min.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$object-assign', 'objective-react$react', 'objective-react$react-dom'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-test-utils.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 3 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-unstable-fire.development.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 10 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react', 'objective-react$object-assign', 'objective-react$prop-types/checkPropTypes', 'objective-react$scheduler', 'objective-react$scheduler/tracing'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fire.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 5 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-unstable-fire.production.min.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react', 'objective-react$object-assign', 'objective-react$scheduler'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fire.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 3 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-unstable-fire.profiling.min.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 4 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react', 'objective-react$object-assign', 'objective-react$scheduler', 'objective-react$scheduler/tracing'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fire.profiling.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 4 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-unstable-fizz.browser.development.js</td>
+					<td class="source">wrap-modules-amd</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>No dependencies detected</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fizz.browser.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-unstable-fizz.browser.production.min.js</td>
+					<td class="source">wrap-modules-amd</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>No dependencies detected</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fizz.browser.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-unstable-fizz.node.development.js</td>
+					<td class="source">wrap-modules-amd</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>No dependencies detected</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fizz.node.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-unstable-fizz.node.production.min.js</td>
+					<td class="source">wrap-modules-amd</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>No dependencies detected</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-fizz.node.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-unstable-native-dependencies.development.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 4 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react-dom', 'objective-react$object-assign'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-native-dependencies.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 2 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom-unstable-native-dependencies.production.min.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 2 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react-dom', 'objective-react$object-assign'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom-unstable-native-dependencies.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 2 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom.development.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 10 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react', 'objective-react$object-assign', 'objective-react$prop-types/checkPropTypes', 'objective-react$scheduler', 'objective-react$scheduler/tracing'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 5 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom.production.min.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react', 'objective-react$object-assign', 'objective-react$scheduler'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 3 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-dom.profiling.min.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 4 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react', 'objective-react$object-assign', 'objective-react$scheduler', 'objective-react$scheduler/tracing'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/cjs/react-dom.profiling.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 4 require() names</td>
+					</tr>
+<tr class="info">
+					<td>index.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/react-dom.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/index'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>profiling.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/react-dom.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/profiling'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>server.browser.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/react-dom-server.browser.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/server.browser'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>server.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 1 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './server.browser'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/server'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>server.node.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/react-dom-server.node.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/server.node'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>test-utils.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/react-dom-test-utils.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/test-utils'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom-server.browser.development.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom-server.browser.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom-server.browser.production.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom-server.browser.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom-test-utils.development.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 2 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react', 'objective-react$react-dom'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom-test-utils.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 2 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom-test-utils.production.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 2 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react', 'objective-react$react-dom'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom-test-utils.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 2 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom-unstable-fire.development.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-fire.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom-unstable-fire.production.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-fire.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom-unstable-fire.profiling.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-fire.profiling.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom-unstable-fizz.browser.development.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-fizz.browser.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom-unstable-fizz.browser.production.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-fizz.browser.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom-unstable-native-dependencies.development.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 2 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react-dom', 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-native-dependencies.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 2 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom-unstable-native-dependencies.production.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 2 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react-dom', 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom-unstable-native-dependencies.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 2 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom.development.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom.production.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-dom.profiling.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/umd/react-dom.profiling.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="info">
+					<td>unstable-fizz.browser.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/react-dom-unstable-fizz.browser.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/unstable-fizz.browser'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>unstable-fizz.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 1 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './unstable-fizz.browser'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/unstable-fizz'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>unstable-fizz.node.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/react-dom-unstable-fizz.node.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/unstable-fizz.node'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>unstable-native-dependencies.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/react-dom-unstable-native-dependencies.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-dom@16.8.6/unstable-native-dependencies'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+						<a name="react-is@16.13.1-babel">
+							react-is@16.13.1
+						</a>
+						</h3>
+		
+						<div class="configuration">
+							<div>Configuration</div>
+							<pre>{
+  "presets": [
+    "liferay-standard"
+  ],
+  "babelrc": false,
+  "compact": false,
+  "only": "**/*",
+  "sourceMaps": true
+}</pre>
+						</div>
+						
+
+			<table>
+				<tr class=""><th>File</th>
+<th>Log source</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>cjs/react-is.development.js</td>
+					<td class="source">wrap-modules-amd</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>No dependencies detected</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-is@16.13.1/cjs/react-is.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react-is.production.min.js</td>
+					<td class="source">wrap-modules-amd</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>No dependencies detected</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-is@16.13.1/cjs/react-is.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>index.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/react-is.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-is@16.13.1/index'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-is.development.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-is@16.13.1/umd/react-is.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react-is.production.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react-is@16.13.1/umd/react-is.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+						<a name="react@16.8.6-babel">
+							react@16.8.6
+						</a>
+						</h3>
+		
+						<div class="configuration">
+							<div>Configuration</div>
+							<pre>{
+  "presets": [
+    "liferay-standard"
+  ],
+  "babelrc": false,
+  "compact": false,
+  "only": "**/*",
+  "sourceMaps": true
+}</pre>
+						</div>
+						
+
+			<table>
+				<tr class=""><th>File</th>
+<th>Log source</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>cjs/react.development.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 4 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$object-assign', 'objective-react$prop-types/checkPropTypes'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react@16.8.6/cjs/react.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 2 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/react.production.min.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 1 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$object-assign'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react@16.8.6/cjs/react.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+					<td>index.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/react.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react@16.8.6/index'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react.development.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react@16.8.6/umd/react.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react.production.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react@16.8.6/umd/react.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/react.profiling.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'react@16.8.6/umd/react.profiling.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+			</table>
+		
+	
+
+		<h3>
+						<a name="scheduler@0.13.6-babel">
+							scheduler@0.13.6
+						</a>
+						</h3>
+		
+						<div class="configuration">
+							<div>Configuration</div>
+							<pre>{
+  "presets": [
+    "liferay-standard"
+  ],
+  "babelrc": false,
+  "compact": false,
+  "only": "**/*",
+  "sourceMaps": true
+}</pre>
+						</div>
+						
+
+			<table>
+				<tr class=""><th>File</th>
+<th>Log source</th>
+<th>Message</th>
+<th></th>
+<th></th></tr>
+				<tr class="info">
+					<td>cjs/scheduler-tracing.development.js</td>
+					<td class="source">add-module-metadata</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Added 'esModule' flag</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/cjs/scheduler-tracing.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/scheduler-tracing.production.min.js</td>
+					<td class="source">add-module-metadata</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Added 'esModule' flag</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/cjs/scheduler-tracing.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/scheduler-tracing.profiling.min.js</td>
+					<td class="source">add-module-metadata</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Added 'esModule' flag</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/cjs/scheduler-tracing.profiling.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/scheduler.development.js</td>
+					<td class="source">add-module-metadata</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Added 'esModule' flag</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/cjs/scheduler.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>cjs/scheduler.production.min.js</td>
+					<td class="source">add-module-metadata</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Added 'esModule' flag</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>No dependencies detected</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/cjs/scheduler.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>index.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/scheduler.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/index'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>tracing-profiling.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/scheduler-tracing.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/tracing-profiling'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="info">
+					<td>tracing.js</td>
+					<td class="source">normalize-requires</td>
+					<td class="info">INFO</td>
+					<td></td>
+					<td>Normalized 3 requires</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: './cjs/scheduler-tracing.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/tracing'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 0 require() names</td>
+					</tr>
+<tr class="warn">
+					<td>umd/scheduler-tracing.development.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/umd/scheduler-tracing.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/scheduler-tracing.production.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/umd/scheduler-tracing.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/scheduler-tracing.profiling.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/umd/scheduler-tracing.profiling.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/scheduler.development.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/umd/scheduler.development'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/scheduler.production.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/umd/scheduler.production.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+<tr class="warn">
+					<td>umd/scheduler.profiling.min.js</td>
+					<td class="source">namespace-amd-define</td>
+					<td class="warn">WARN</td>
+					<td></td>
+					<td>Found 1 define() calls inside the module definition which have been ignored as they should never be executed during runtime</td>
+				</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">normalize-requires</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Normalized 1 requires</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">wrap-modules-amd</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Detected dependencies: 'objective-react$react'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">name-amd-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Set module name to 'scheduler@0.13.6/umd/scheduler.profiling.min'</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-modules</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced 1 define() names, 0 define() dependencies, and 1 require() names</td>
+					</tr>
+<tr class="info">
+						<td></td>
+						<td class="source">namespace-amd-define</td>
+						<td class="info">
+							INFO
+						</td>
+						<td></td>
+						<td>Namespaced first AMD define in file</td>
+					</tr>
+			</table>
+		
+	
+	
+					
+			</body>
+		</html>
+	
