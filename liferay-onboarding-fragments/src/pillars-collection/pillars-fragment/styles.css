@@ -1,0 +1,39 @@
+.fragment_35765{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  padding: 15px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.fragment_35765 li{
+    width: 100%;
+    margin: 15px 0;
+}
+
+.fragment_35765 h2{
+  margin: 15px 0;
+}
+
+.fragment_35765 li img{
+    width: 50%;
+}
+
+@media(min-width: 991px){
+  .fragment_35765{
+      justify-content: space-between;
+      flex-direction: row;
+  }
+
+  .fragment_35765 li{
+      width: 33%;
+      margin: 15px;
+  }
+
+  .fragment_35765 li p{
+  }
+}
