@@ -1,0 +1,38 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "paintTitle",
+          "label": "Paint Title",
+          "type": "colorPalette",
+          "dataType": "object",
+          "typeOptions": {
+            "validValues": [
+              {
+                "cssClass": "red",
+                "rgbValue": "rgb(255,0,0)"
+              },
+              {
+                "cssClass": "green",
+                "rgbValue": "rgb(0,255,0)"
+              },
+              {
+                "cssClass": "blue",
+                "rgbValue": "rgb(0,0,255)"
+              },
+              {
+                "cssClass": "white",
+                "rgbValue": "rgb(255,255,255)"
+              }
+            ]
+          },
+          "defaultValue": {
+              "cssClass": "black",
+              "rgbValue": "rgb(0,0,0)"
+          }
+        }
+      ]
+    }
+  ]
+}
