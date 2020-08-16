@@ -1,0 +1,39 @@
+.blm {
+  color: inherit;
+  font-size: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  width: 100%;
+  font-size: 25px;
+  background-color: #20232a;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blm a {
+  color: #fff;
+}
+
+.blm a:hover {
+  text-decoration: none;
+}
+
+.blm div {
+  display: inline;
+}
+
+.blm div span:first-child {}
+
+.blm div:last-child {
+  color: #61dafb;
+}
+
+@media(max-width: 500px) {
+  .blm {
+    font-size: 14px;
+
+  }
+}

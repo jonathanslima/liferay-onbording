@@ -1,0 +1,30 @@
+.banner {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAkSURBVHgB7cxBEQAACAIwtH8Pzw52kxD8OBZgNXsPQUOUwCIgAz0DHTyygaAAAAAASUVORK5CYII=");
+  background-position: center;
+  background-size: cover;
+}
+
+.banner-main-home {
+  margin: 0 -15px;
+  margin-bottom: 60px;
+}
+
+.getting-started div {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.call-action-title {
+  font-weight: 700;
+  font-size: 60px;
+  color: #61dafb;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.lead div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
