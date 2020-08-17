@@ -1,7 +1,8 @@
-.main-footer {
-  color: inherit;
-  font-size: 18px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-    'Helvetica Neue', sans-serif;
+.section-footer-logo {
+  width: 160px;
+  margin-bottom: 30px;
+}
+
+.first-section {
+  flex-direction: column;
 }
